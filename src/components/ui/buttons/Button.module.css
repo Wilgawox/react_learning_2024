@@ -13,3 +13,13 @@
     color: rgba(255, 21, 21, 0.74);
     background-color: gold;
 }
+
+.Button img{
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.Button.Red{
+    background-color: black;
+    color: red;
+}
