@@ -1,0 +1,15 @@
+.Button{
+    border-style: groove;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin: 0 25px 25px 0;
+    box-shadow: 25px 25px 25px gray;
+
+    font-size: 23pt;
+    font-weight: 900;
+
+    display: inline;
+
+    color: rgba(255, 21, 21, 0.74);
+    background-color: gold;
+}
