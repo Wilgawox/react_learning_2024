@@ -20,7 +20,7 @@ const App = (props) => {
         <Header />
         <NavBar />
         <FlexWFirstGrow>
-          <MemeSVGViewver image={undefined} meme={meme} basePath="" />
+          <MemeSVGViewver image={image.find((item)=>item.id===meme.imageId)} meme={meme} basePath="" />
           <MemeForm />
         </FlexWFirstGrow>
         <div>{JSON.stringify(images)}</div>

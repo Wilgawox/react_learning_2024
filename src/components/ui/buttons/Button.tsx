@@ -30,7 +30,6 @@ const Button: React.FC<IButtonProps> = (props) => {
         data-testid="Button"
         onClick={(evt) => {
           setIsClicked(true);
-          if(undefined != props.onButtonClick){props.onButtonClick("HI !");}
         }}
       >
         {props.children}
