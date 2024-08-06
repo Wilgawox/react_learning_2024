@@ -14,21 +14,18 @@ interface IButtonProps {
 
 const Button: React.FC<IButtonProps> = (props) => {
   const [isClicked, setIsClicked] = useState(false);
-  
   useEffect(()=>{
     setTimeout(() => {setIsClicked(false);},300);
   }, [isClicked])  
 
   return (
     <>
-      <div>isCLicked:{isClicked.toString()}</div>
       <div
         style={{
           ...props.style,
           backgroundColor: props.bgcolor,
           color: props.color,
         }}
-        type = {props.type}
         className={`${style.Button}${isClicked?' '+style.clicked:''}`}
         data-testid="Button"
         onClick={(evt) => {
