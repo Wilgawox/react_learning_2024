@@ -1,12 +1,13 @@
 .Header {
     text-align: left;
-    font-size: 20px;
+    font-size: 35pt;
+    color:rgb(255, 127, 127);
 };
 
 .meme {
-    color:aquamarine;
+    color:rgb(255, 127, 127);
 }
 
 .js {
-    color: yellow
+    color: rgb(255, 0, 157);
 }
