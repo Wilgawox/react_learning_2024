@@ -1,1 +1,12 @@
-.Header {}
+.Header {
+    text-align: left;
+    font-size: 20px;
+};
+
+.meme {
+    color:aquamarine;
+}
+
+.js {
+    color: yellow
+}

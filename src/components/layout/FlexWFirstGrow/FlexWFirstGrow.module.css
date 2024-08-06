@@ -1,0 +1,7 @@
+.FlexWFirstGrow {
+    display: flex;
+    height: 100%;
+}
+.FlexWFirstGrow>*:first-child{
+    flex-grow: 1;
+}

@@ -5,7 +5,8 @@ import styles from "./Header.module.css";
 const Header = (props) => {
   return (
     <div className={styles.Header} data-testid="Header">
-      Header Component
+      <span className="meme">MEME.</span>
+      <span className="js">JS</span>
     </div>
   );
 };
