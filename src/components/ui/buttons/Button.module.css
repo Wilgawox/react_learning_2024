@@ -18,3 +18,13 @@
     max-width: 2%;
     max-height: 2%;
 }
+
+.Button:hover{
+    box-shadow: 15px 15px 25px gray;
+    border: white;
+}
+
+.clicked{
+    box-shadow: 5px 5px 25px gray !important;
+    border: black;
+}
