@@ -12,7 +12,7 @@ const App = (props) => {
   const [meme, setMeme] = useState(emptyMeme);
   const[images, setImages] = useState([]);
 
-  useEffect(()=> {fetch('http://localhost:5679/images').then((r)=>r.json()).then((arr) => setImages(arr))});
+  useEffect(()=> {fetch('http://localhost:5679/images').then((r)=>r.json()).then((arr) => setImages(arr))},[]);
 
   return (
     <div className="App">
@@ -20,10 +20,10 @@ const App = (props) => {
         <Header />
         <NavBar />
         <FlexWFirstGrow>
-          <MemeSVGViewver image={image.find((item)=>item.id===meme.imageId)} meme={meme} basePath="" />
+          <MemeSVGViewver image={images.find((item)=>item.id===meme.imageId)} meme={meme} basePath="" />
           <MemeForm />
         </FlexWFirstGrow>
-        <div>{JSON.stringify(images)}</div>
+        <div>{JSON.stringify(images).substring(1,10)}</div>
         <Footer />
       </FlexHThirdGrow>
     </div>
