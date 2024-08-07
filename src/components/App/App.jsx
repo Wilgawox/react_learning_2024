@@ -3,13 +3,13 @@ import FlexWFirstGrow from "../layout/FlexWFirstGrow/FlexWFirstGrow";
 import FlexHThirdGrow from "../layout/FlexHThirdGrow/FlexHThirdGrow";
 import Footer from "../ui/Footer/Footer";
 import Header from "../ui/Header/Header";
-import MemeSVGViewver from "../ui/MemeSVGViewver/MemeSVGViewver";
+// import MemeSVGViewver from "../ui/MemeSVGViewver/MemeSVGViewver";
 import MemeForm from "../functionnal/MemeForm/MemeForm";
 import NavBar from "../ui/NavBar/NavBar";
 import { MemeSVGViewer, emptyMeme } from "orsys-tjs-meme";
 
 const App = (props) => {
-  const [meme, setMeme] = useState(emptyMeme);
+  const [meme, setMeme] = useState({...emptyMeme, text:"React c'est super"});
   const[images, setImages] = useState([]);
 
   useEffect(()=> {fetch('http://localhost:5679/images').then((r)=>r.json()).then((arr) => setImages(arr))},[]);
@@ -20,8 +20,8 @@ const App = (props) => {
         <Header />
         <NavBar />
         <FlexWFirstGrow>
-          <MemeSVGViewver image={images.find((item)=>item.id===meme.imageId)} meme={meme} basePath="" />
-          <MemeForm />
+          <MemeSVGViewer image={images.find((item)=>item.id===meme.imageId)} meme={meme} basePath="" />
+          <MemeForm images={images} meme={meme}/>
         </FlexWFirstGrow>
         <div>{JSON.stringify(images).substring(1,10)}</div>
         <Footer />
